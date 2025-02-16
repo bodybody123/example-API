@@ -2,7 +2,8 @@
 
 Welcome everyone to the source code for Example API Repository made specifically for 
 **JavaScript Introduction: A Sneak Peek into Backend** webinar. It provides a functional API to help you understand the basics of backend development using JavaScript
--
+
+---
 
 ## Overview
 This repository contains a basic API built with JavaScript and Node.js. It demonstrates how to create a backend server, handle HTTP requests, and respond with JSON data. The API is intentionally simple, making it easy for beginners to understand and modify.
@@ -62,5 +63,7 @@ This project is licensed under the ISC License. See the LICENSE file for details
 ## Acknowledgments
 - This project was created as part of the JavaScript Introduction: A Sneak Peek into Backend webinar.
 - Special thanks to the contributors and the open-source community for their invaluable resources and tools.
-
+---
 Feel free to explore, modify, and expand this API to suit your learning needs. Happy coding! 🚀
+
+---
