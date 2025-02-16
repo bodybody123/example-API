@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example API</title>
+
+    <style>
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Display Data</h1>
+        <p id="data"></p>
+    </div>
+
+    <button type="button" onclick="getData()" >Fetch</button>
+
+    <script>
+        const dataElement = document.getElementById("data");
+
+        async function getData() {
+            const url = "http://localhost:8000/";
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+                }
+
+                const json = await response.json();
+
+                dataElement.innerHTML = json.message;
+                dataElement.className = "success";
+            } catch (error) {
+                console.error(error.message);
+
+                dataElement.innerHTML = error.message;
+                dataElement.className = "error";
+            }
+        }
+    </script>
+</body>
+</html>
